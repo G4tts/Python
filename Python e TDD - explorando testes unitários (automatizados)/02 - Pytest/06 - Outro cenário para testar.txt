@@ -1,0 +1,75 @@
+06 - Outro cenário para testar
+
+Agora, o chefe dela anunciou uma nova feature que ele gostaria de implementar na classe Funcionario: um método que retorne o sobrenome dos funcionários. Então, vamos ajudar a Dominique. No arquivo bytebank.py, a partir da linha 23 (abaixo do método idade), criaremos um método chamado sobrenome.
+
+Quando uma pessoa insere o nome em um campo, ela pode incluir alguns espaços (caracteres em branco) antes ou depois do nome completo dela. Então, vamos usar o método strip do Python para remover quaisquer espaços desnecessários, caso eles existam:
+
+# código anterior omitido
+
+def sobrenome(self):
+    nome_completo = self.nome.strip()
+
+# código posterior omitido
+Dessa forma, armazenaremos o nome completo da pessoa na variável nome_completo, sem espaços excedentes. Em seguida, vamos usar a mesma lógica que empregamos no método idade. Com o split, geraremos uma lista com todos os nomes da pessoa, pois queremos selecionar apenas o último:
+
+# código anterior omitido
+
+def sobrenome(self):
+    nome_completo = self.nome.strip()
+    nome_quebrado = nome_completo.split(' ')
+
+# código posterior omitidoCOPIAR CÓDIGO
+Diferentemente do que fizemos em idade, agora o caractere de referência do método split será um espaço em branco, pois as pessoas sempre colocam um espaço entre um nome e outro. Por fim, vamos retornar o último item da lista nome_quebrado:
+
+# código anterior omitido
+
+def sobrenome(self):
+    nome_completo = self.nome.strip()
+    nome_quebrado = nome_completo.split(' ')
+    return nome_quebrado[-1]
+
+# código posterior omitido
+
+Pronto! Seguindo a demanda do chefe da Dominique, criamos o método sobrenome que retornará o último nome de um funcionário.
+
+A seguir, vamos abrir o arquivo test_bytebank.py novamente e codar um teste para esse novo método. Após o código do primeiro teste, criaremos outro chamado test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho. Depois, aplicaremos a metodologia Given-When-Then.
+
+O contexto será a entrada do nome do Lucas Carvalho. Para testar, vamos incluir um espaço antes e outro depois do nome:
+
+def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
+    entrada = ' Lucas Carvalho ' # Given
+Em seguida, vamos definir o resultado esperado e instanciar o objeto. O nome será a entrada; a data de nascimento, 11/11/2000; e o salário, R$1111,00:
+
+def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
+    entrada = ' Lucas Carvalho ' # Given
+    esperado = 'Carvalho'
+
+    lucas = Funcionario(entrada, '11/11/2000', 1111)COPIAR CÓDIGO
+A ação que será testada é a chamada do método sobrenome. Semelhante ao primeiro teste, vamos armazenar o retorno numa variável chamada resultado:
+
+def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
+    entrada = ' Lucas Carvalho ' # Given
+    esperado = 'Carvalho'
+
+    lucas = Funcionario(entrada, '11/11/2000', 1111)
+    resultado = lucas.sobrenome() # WhenCOPIAR CÓDIGO
+No desfecho, temos o assert que verificará se o resultado é igual ao esperado:
+
+def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
+    entrada = ' Lucas Carvalho ' # Given
+    esperado = 'Carvalho'
+
+    lucas = Funcionario(entrada, '11/11/2000', 1111)
+    resultado = lucas.sobrenome() # When
+
+    assert resultado == esperado
+
+Para rodar o teste, acionaremos o terminal e executaremos pytest -v. Assim, vamos obter o resultado do primeiro teste (relativo ao método idade), seguido do resultado do segundo teste (relativo ao sobrenome). Ambos retornarão como verdadeiro, então ambos passarão.
+
+Se executássemos apenas pytest (sem a flag -v), como resultado teríamos tests/test_bytebank.py ... A quantidade de pontos ao final da linha é igual à quantidade de testes que passaram.
+
+Vale relembrar que outra forma de rodar todos os testes é clicar na seta verde, logo à esquerda de class TestClass e selecionar "Run" — ou usar o atalho "Ctrl + Shift + F10".
+
+Também temos a opção de rodar um único teste, clicando na seta verde à esquerda do nome do método desejado, por exemplo, o test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho. Assim, teremos apenas o resultado desse teste específico.
+
+Sendo assim, acabamos de desenvolver outro teste com uma situação diferente.

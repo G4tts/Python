@@ -1,0 +1,13 @@
+04
+Exceptions em software
+
+PRÓXIMA ATIVIDADE
+
+É muito comum a utilização de exceptions no desenvolvimento de softwares em Python, portanto, é natural que existam ferramentas em testes para lidar com exceptions.
+
+Sobre exceptions e sua influência na construção de testes, marque a alternativa correta.
+
+
+Alternativa correta
+Uma forma de criar um teste que leve em consideração uma exception é utilizando o código with pytest.raises(Exception).
+Através do trecho de código acima, podemos lidar com exceptions usando o Pytest.

@@ -1,0 +1,28 @@
+04
+TDD e sua utilização
+
+PRÓXIMA ATIVIDADE
+
+O Test-Driven Development (Desenvolvimento Guiado por Testes) é um método de desenvolvimento de software amplamente utilizado no mercado de trabalho voltado a Python.
+
+A respeito do TDD, marque as alternativas corretas:
+
+Alternativa correta
+O TDD trabalha com o conceito de que os testes são uma representação das regras de negócio que o software deve obedecer.
+Ao final do desenvolvimento de um software funcional utilizando o TDD, teremos uma série de arquivos de testes que expõem de forma direta o que cada porção do código da aplicação deve desempenhar. Assim, as funcionalidades estarão de acordo com as regras de negócio.
+
+
+Após completar o ciclo do TDD para o desenvolvimento de uma funcionalidade do código, a pessoa desenvolvedora deve focar os seus esforços em não quebrar os testes antigos ao criar novos testes para novas funcionalidades.
+É normal que ao longo do desenvolvimento do software usando o TDD, algum trecho de código que anteriormente havia sido desenvolvido e que passava em todos os testes deixe de passar.. Isso faz parte da filosofia de refatoração do TDD, será comum que trechos de códigos parem de funcionar à medida que outros sejam criados e a intenção é sempre consertá-los conforme surjam.
+
+Alternativa correta
+A etapa da implementação deve ser feita com o pensamento de que o código a ser desenvolvido deve garantir que os testes feitos passem.
+Uma vez que o teste foi criado e que ele expressa de forma correta a regra de negócio e como o código deve responder, basta que a implementação siga o raciocínio desenvolvido pelo teste, ou seja, o teste deve passar.
+
+
+Uma vez que criamos testes eles não serão mais alterados ao longo do desenvolvimento.
+É normal que alguns testes tenham que ser reformulados à medida que o desenvolvimento da aplicação avança, seja por motivos de mudança na regra de negócio ou simples reestruturação do arquivo de testes.
+
+
+A refatoração é a parte menos importante do TDD, uma vez que a criação do teste é o que define o escopo da funcionalidade e a implementação se trata do próprio software.
+A refatoração é um dos grandes trunfos do TDD, pois encoraja que o código do software sempre seja revisado pelas pessoas desenvolvedoras, de forma que esteja em constante melhoria.

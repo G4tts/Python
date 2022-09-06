@@ -1,0 +1,30 @@
+07
+Método de construção de testes
+
+PRÓXIMA ATIVIDADE
+
+Ao construir testes automatizados, nem sempre é evidente que tipo de lógica devemos implementar no código para testar determinada funcionalidade do projeto. Para tornar isso mais simples, foram criadas algumas metodologias para cada passo da construção dos testes, garantindo maior eficiência.
+
+Um dos métodos utilizados para testes é o Given-When-Then. Selecione as alternativas corretas a respeito da técnica.
+
+Alternativa correta
+O Then é o final do raciocínio proposto pelo método e constata um conjunto específico de consequências obtidas pela fase do Given e do When.
+O Then levanta uma das possíveis consequências da ação executada no raciocínio do teste.
+
+
+O método Given-When-Then é uma atualização de outro método defasado e pouco utilizado chamado de Arrange-Act-Assert (AAA).
+O Arrange-Act-Assert (AAA) é um método alternativo ao Given-When-Then e possui, em cada uma das suas etapas, uma abordagem alternativa, contudo semelhante. Também é bastante utilizada no mercado de trabalho.
+
+
+Alternativa correta
+O When é o momento em que uma ação é executada utilizando o contexto apresentado anteriormente.
+O When utiliza o contexto apresentado anteriormente para executar uma ação. Essa ação é o centro do raciocínio do teste e se desenvolverá em uma consequência que será analisada pela etapa Then.
+
+
+O Then representa a consequência da ação desenvolvida anteriormente e sempre é fiel à realidade do que acontece no momento da efetivação da ação na funcionalidade que está sendo testada.
+O Then representa apenas uma consequência possível da ação desempenhada pela etapa When. Sendo assim, ela nem sempre será fiel ao que realmente acontece como consequência da ação Caso não seja fiel, acaba configurando um teste que não passa.
+
+
+
+O Given significa dado, ou seja, deve-se pensar nos dados que estão sendo abordados na funcionalidade que será testada.
+A tradução do termo Given para o português leva à palavra dado, porém não se trata de uma referência a dados, mas a um contexto específico fornecido pela natureza da funcionalidade que será testada.

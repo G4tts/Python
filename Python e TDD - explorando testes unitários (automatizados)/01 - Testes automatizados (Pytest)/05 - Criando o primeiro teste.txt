@@ -1,0 +1,92 @@
+05 - Criando o primeiro teste
+
+Estamos utilizando um objeto: o funcionário lucas que criamos na linha 3, que recebe 'Lucas Carvalho' como nome, '13/03/2000' como data de nascimento e 1000 como salário. Depois, na linha 5, chamamos o método idade para calcular a idade do funcionário.
+
+Inicialmente, ao informar a data de nascimento do Lucas, colocamos apenas o ano. No entanto, notamos que isso seria uma infração à regra de negócio. Quando pensamos em data de nascimento, trata-se de dia, mês e ano — não apenas o ano! Logo, substituímos o ano 2000 por uma string '13/03/2000':
+
+from codigo.bytebank import Funcionario
+
+lucas = Funcionario('Lucas Carvalho', '13/03/2000', 1000)
+
+print(lucas.idade)COPIAR CÓDIGO
+Porém, essa mudança causou um erro no método idade. A seguir, vamos verificar o funcionamento dessa função, no arquivo bytebank.py.
+
+Na linha 18, através da biblioteca date do Python, recebemos o ano atual (no caso, 2022). Para calcular a idade, na linha 19, a data de nascimento informada pelo funcionário é subtraída do ano atual. Nessa linha, a Dominique usou o método int para transformar a data de nascimento em um int, porém se usarmos o formato 13/03/2000, com barras, esse valor não será transformado em int.
+
+Então, vamos alterar o método idade para torná-lo funcional novamente. "Quebraremos" a data de nascimento em três partes, formando uma lista com três itens. O primeiro item será o dia; o segundo, o mês; e o terceiro, o ano.
+
+Na linha 18, criaremos uma variável chamada data_nascimento_quebrada e atribuiremos a ela o resultado de self._data_nascimento.split('/'):
+
+# código anterior omitido
+
+def idade(self):
+    data_nascimento_quebrada = self._data_nascimento.split('/')
+    ano_atual = date.today().year
+    return ano_atual - int(self._data_nascimento)
+
+# código posterior omitidoCOPIAR CÓDIGO
+No vídeo, há um pequeno erro de digitação na variável data_nascimento_quebrada, mas ele já foi corrigido nas transcrições.
+
+O split é um método do Python utilizado para formatar strings. Com ele, vamos "quebrar" a string em determinados pontos e retornar uma lista com essas partes "quebradas". Dentro do split, passaremos o caractere usado como referência para realizar essas quebras. No nosso caso, é a barra (/). Assim, teremos uma lista com três itens: dia, mês e ano.
+
+Em seguida, vamos criar uma variável chamada ano_nascimento e igualá-la ao último item da lista data_nascimento_quebrada. Usaremos data_nascimento_quebrada[-1] para selecionar o último item da lista:
+
+# código anterior omitido
+
+def idade(self):
+    data_nascimento_quebrada = self._data_nascimento.split('/')
+    ano_nascimento = data_nascimento_quebrada[-1]
+    ano_atual = date.today().year
+    return ano_atual - int(self._data_nascimento)
+
+# código posterior omitidoCOPIAR CÓDIGO
+Por fim, na linha 21, substituiremos self._data_nascimento por ano_nascimento:
+
+# código anterior omitido
+
+def idade(self):
+    data_nascimento_quebrada = self._data_nascimento.split('/')
+    ano_nascimento = data_nascimento_quebrada[-1]
+    ano_atual = date.today().year
+    return ano_atual - int(ano_nascimento)
+
+# código posterior omitidoCOPIAR CÓDIGO
+Na sequência, vamos executar o código de main.py. Basta abrir o arquivo, clicar com botão direito do mouse sobre ele e selecionar "Run 'main'" (ou usar o atalho "Ctrl + Shift + F10"). O retorno será a idade de Lucas, 22 anos. Ou seja, após as alterações, o código voltou a funcionar.
+
+Assim, nós instanciamos lucas como um funcionário e exibimos sua idade no terminal, porém o chefe da Dominique gostaria que transformássemos esse processo em um teste automatizado. Então, vamos comentar as linhas 3 e 5, e desenvolver esses testes.
+
+A partir da linha 7, criaremos um método chamado teste_idade, em que instanciaremos um novo funcionário. O nome dele será 'Teste', a data de nascimento será '13/03/2000' e o salário, 1111:
+
+from codigo.bytebank import Funcionario
+
+#lucas = Funcionario('Lucas Carvalho', '13/03/2000', 1000)
+
+#print(lucas.idade)
+
+def teste_idade():
+    funcionario_teste = Funcionario('Teste', '13/03/2000', 1111)COPIAR CÓDIGO
+Em seguida, usando o prefixo f, vamos printar o valor formatado:
+
+# código anterior omitido
+
+def teste_idade():
+    funcionario_teste = Funcionario('Teste', '13/03/2000', 1111)
+    print(f'Teste = {funcionario_teste.idade()}')COPIAR CÓDIGO
+Acabamos de criar um teste automatizado. Informamos alguns valores e o teste indicará se tudo está funcionando como esperado. Antes de rodar o código, precisamos chamar teste_idade:
+
+# código anterior omitido
+
+def teste_idade():
+    funcionario_teste = Funcionario('Teste', '13/03/2000', 1111)
+    print(f'Teste = {funcionario_teste.idade()}')
+
+teste_idade()COPIAR CÓDIGO
+Por fim, vamos executar o código. O retorno estará correto! Sendo assim, o nosso primeiro teste automatizado está pronto. Vale notar que ele está dentro de um método, onde poderíamos aplicar várias outras lógicas mirabolantes para testar o código da Dominique.
+
+Visto que tudo está funcionando corretamente, podemos remover as linhas comentadas do arquivo para deixá-lo mais enxuto:
+
+from codigo.bytebank import Funcionario
+
+def teste_idade():
+    funcionario_teste = Funcionario('Teste', '13/03/2000', 1111)
+    print(f'Teste = {funcionario_teste.idade()}')

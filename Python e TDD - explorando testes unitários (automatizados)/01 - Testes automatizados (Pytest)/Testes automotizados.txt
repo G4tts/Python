@@ -1,0 +1,44 @@
+09
+Faça como eu fiz: testes automatizados
+
+1) Inicialmente, partimos do projeto que a Dominique já tinha desenvolvido. Para fazer o download do código completo basta clicar aqui;
+
+2) Ao abrir o projeto no editor de código Pycharm, começamos a criação de um ambiente virtual através da utilização do seguinte código no terminal/prompt:
+
+python3 -m venv venv
+3) Mas não basta a criação de um ambiente virtual, temos que ativá-lo também, o que podemos fazer utilizando o seguinte código no terminal:
+
+source venv/bin/activate
+ATENÇÃO! Caso você esteja utilizando o sistema operacional Windows, a criação e a ativação do ambiente virtual serão um pouco diferentes. Recomendo que dê um olhada nesse artigo.
+
+4) Logo em seguida, criamos um novo arquivo chamado main.py no diretório principal do projeto onde iremos explorar o código feito pela Dominique e entender melhor o funcionamento do método idade().
+
+ from codigo.bytebank import Funcionario
+
+lucas = Funcionario('Lucas Carvalho', '13/03/2000', 1000)
+
+print(lucas.idade())
+5) Percebemos que existe um mal entendido na regra de negócio aplicada na classe Funcionario. A data de nascimento deve ser recebida contendo dia, mês e ano, ao contrário de apenas ano.
+
+6) A partir dessa conclusão, tivemos que corrigir a lógica do método idade().
+
+def idade(self):
+        data_nasciemnto_quebrada = self._data_nascimento.split('/')
+        ano_nascimento = data_nasciemnto_quebrada[-1]
+        ano_atual = date.today().year
+        return ano_atual - int(ano_nascimento)
+7) A partir do encontro desse bug, o chefe da Dominique acha interessante que tenhamos um meio alternativo de testar o código. Dessa forma, criamos nosso primeiro teste automatizado no arquivo main.py.
+
+from codigo.bytebank import Funcionario
+
+def teste_idade():
+    funcionario_teste = Funcionario('Teste', '13/03/2000', 1111)
+    print(f'Teste = {funcionario_teste.idade()}')
+
+    funcionario_teste1 = Funcionario('Teste', '13/03/1999', 1111)
+    print(f'Teste = {funcionario_teste1.idade()}')
+
+    funcionario_teste2 = Funcionario('Teste', '01/12/1999', 1111)
+    print(f'Teste = {funcionario_teste2.idade()}')
+
+teste_idade()

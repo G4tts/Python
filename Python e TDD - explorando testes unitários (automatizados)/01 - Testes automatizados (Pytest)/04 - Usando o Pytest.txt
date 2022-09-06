@@ -1,0 +1,37 @@
+04
+Usando o Pytest
+
+PRÓXIMA ATIVIDADE
+
+O Pytest é o framework de testes mais utilizado do mercado de desenvolvimento de software com Python. Ele facilita a construção de testes unitários, sendo altamente escalável e detentor de múltiplas ferramentas para facilitar o uso de metodologias de desenvolvimento de software voltadas a testes.
+
+A respeito da criação de testes com o Pytest, marque as alternativas corretas.
+
+Um outro nome muito utilizado ao se referir ao Pytest é Unittest, já que esse era o seu nome até a nova versão de 2009.
+
+Unittest se trata do nome de outro framework de testes do Python, muito utilizado antes da criação do Pytest, em 2009. Entretanto, apesar do Pytest ser o framework mais usado, o uso do Unittest ainda é comum, e até mesmo de ambos em conjunto.
+
+
+Todos os testes criados pelo Pytest devem ter em seu nome o prefixo teste_.
+
+O Pytest é bem rígido ao se tratar de nomenclatura de testes e para que o programa reconheça um método de testes, devemos colocar o prefixo test_. Mais adiante veremos uma forma de mudar essa configuração padrão do Pytest.
+
+
+
+Alternativa correta
+Os nomes dos testes devem ser construídos da forma mais verbosa possível.
+
+A escrita verbosa de nomes para teste é um padrão que ultrapassa o próprio Python. Muitas linguagens de programação seguem essa boa prática, que diz que o nome do teste deve explicar da forma mais clara possível para que ele serve.
+
+
+
+O Pytest depende diretamente da utilização de uma IDE que o suporte.
+
+A utilização de uma IDE específica é algo que fica à escolha da pessoa desenvolvedora.. O Pytest não possui nenhuma dependência de sua utilização em uma IDE, uma vez que pode ser utilizado diretamente no terminal/prompt de comandos.
+
+
+
+Alternativa correta
+Uma boa prática na utilização do Pytest é a criação de um módulo específico para testes, ou seja, um diretório denominado tests contendo um arquivo __init__.py.
+
+Esse diretório irá conter todos os arquivos referentes aos testes da aplicação, sendo que a nomenclatura dos arquivos sempre deverá conter o prefixo test_.

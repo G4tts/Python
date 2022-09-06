@@ -1,0 +1,10 @@
+05
+Para saber mais: Arrange-Act-Assert
+
+PRÓXIMA ATIVIDADE
+
+Existe uma outra metodologia muito utilizada para a construção do raciocínio de funcionamento de testes chamada Arrange-Act-Assert ou simplesmente AAA. Essa metodologia também consiste em 3 etapas para a construção de um teste, análogas às etapas do Given-When-Then.
+
+Arrange: A tradução não literal seria algo como organizar. A organização, nesse caso, seria focada nos passos preliminares necessários para montar contexto inicial do teste;
+Act: A tradução não literal seria algo como agir. Nesse caso seria a ação que parte dos passos organizados na primeira etapa e leva ao que vamos averiguar no final;
+Assert: A tradução não literal seria algo como averiguar. Nesse caso, averiguarmos que o desfecho trazido pela ação é realmente aquele que esperamos.

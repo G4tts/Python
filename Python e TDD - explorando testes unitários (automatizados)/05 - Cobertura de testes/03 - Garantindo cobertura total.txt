@@ -1,0 +1,39 @@
+03 - Garantindo cobertura total
+
+Na aula anterior, aprendemos que é possível acrescentar a tag --cov=codigo tests/ para especificar ao pytest-cov o diretório em que queremos rodar o escaneamento de cobertura de testes. No caso, especificamos o diretório codigo, onde está o arquivo bytebank.py.
+
+Ao executar o comando pytest --cov=codigo /tests, obtivemos a seguinte tabela:
+
+Name	Stmts	Miss	Cover
+codigo/bytebank.py	35	1	97%
+TOTAL	35	1	97%
+Nosso próximo passo é descobrir em que trechos do nosso código está faltando testes, pois temos 97% de cobertura. No pytest-cov, podemos usar a tag --cov-report term-missing para especificar outro tipo de relatório, que exibirá os termos faltantes para os 100% de cobertura.
+
+Rodando pytest --cov=codigo tests/ --cov-report term-missing, o retorno será uma tabela ligeiramente diferente da anterior:
+
+Name	Stmts	Miss	Cover	Missing
+codigo/bytebank.py	35	1	97%	47
+TOTAL	35	1	97%	
+Há uma coluna extra denominada "Missing", que explicita a linha do código que não está coberta por testes. No caso, a linha 47 do arquivo bytebank.py.
+
+Logo, vamos abrir o bytebank.py e ir até a linha 47. Trata-se de uma linha dentro do método __str__ desenvolvido pela Dominique, que retorna os valores do objeto. De fato, não há nenhum teste atrelado a este segmento, então vamos criá-lo.
+
+Ao final do arquivo tests_bytebank.py, usaremos o mesmo modelo do Given-When-Then para construir um teste para __str__:
+
+def test_retorno_str(self):
+    nome, data_nascimento, salario = 'Teste', '12/03/2000', 1000 # given
+    esperado = 'Funcionario (Teste, 12/03/2000, 1000)'
+
+    funcionario_teste = Funcionario (nome, data_nascimento, salario)
+    resultado = funcionario_teste.__str.__() # when
+
+    assert resultado == esperado #thenCOPIAR CÓDIGO
+Como entrada, temos os valores para criar o objeto (nome, data de nascimento e salário). O esperado é uma string com os dados do funcionário. Na instanciação, informamos nome, data_nascimento e salario. A variável resultado armazenará o retorno de funcionario_teste.__str.__().
+
+No terminal, executaremos pytest e saberemos que todos os testes continuam passando. Em seguida, rodaremos pytest --cov=codigo tests/ --cov-report term-missing novamente e notaremos que temos agora 100% de cobertura!
+
+Ao estudar orientação a objetos com Python, aprendemos que o método __str__ é uma estrutura base da construção de classe, assim como o __repr__ e os properties. Trata-se de elementos próprios do funcionamento da linguagem Python e os testes não são feitos para averiguar se essas estruturas intrínsecas da linguagem estão funcionando. O objetivo dos testes é verificar os raciocínios que nós, pessoas programadoras, desenvolvemos. Por exemplo, a lógica que programamos no método calcular_bonus ou no decrescimo_salario.
+
+Com isso em mente, não faz sentido ter um teste para verificar o método __str__, pois estaríamos checando apenas se a linguagem está funcionando — o que é desnecessário.
+
+Em vez de criar testes para questões de linguagem, podemos informar ao coverage do Pytest que existem algumas exceções, isto é, algumas linhas no nosso código que não é preciso testar (como esses métodos intrínsecos da linguagem). Caso ocorra algum problema nessas linhas, provavelmente será um erro de sintaxe e ficará visível para nós posteriormente.

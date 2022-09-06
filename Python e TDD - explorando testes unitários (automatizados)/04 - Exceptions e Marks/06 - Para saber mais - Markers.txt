@@ -1,0 +1,33 @@
+06
+Para saber mais: Markers
+
+PRÓXIMA ATIVIDADE
+
+Parte da razão pela qual o Pytest é conhecido como framework de testes, não uma simples biblioteca, está no fato do Pytest possuir uma vasta gama de ferramentas direcionadas a melhorar a eficiência e organização dos testes desenvolvidos.
+
+Os markers ou marcadores são uma dessas ferramentas incríveis do Pytest e oferecem não somente uma forma de organizar melhor os testes com tags personalizadas, mas colaboram para definir como determinados testes irão funcionar ou ser executados.
+
+skip
+@pytest.mark.skip(reason="não quero executar isso agora")
+def test_aleatorio():
+    ...
+Através do uso do marker skip podemos pular um teste, caso a execução dele não seja necessária naquele instante.
+
+skipif
+import sys
+
+
+@pytest.mark.skipif(sys.version_info < (3, 10), reason="Requer Python na versão 3.10 ou superior")
+def test_funcao():
+    ...
+Acima, o teste não é executado caso sys.version_info < (3, 10) seja verdadeiro, ou seja, caso a versão do Python esteja abaixo da versão 3.10.
+
+Através do uso do marker skipif podemos pular um teste caso ele se encaixe em determinada situação definida por uma condicional.
+
+xfail
+@pytest.mark.xfail
+def test_funcao():
+    ...
+Através do uso do marker xfail especificamos que o teste deve retornar uma falha, em vez de passar.
+
+Essas e muitas outras possibilidades de uso de markers para modificar a mecânica de uso dos testes podem ser vistas na documentação oficial do Pytest.

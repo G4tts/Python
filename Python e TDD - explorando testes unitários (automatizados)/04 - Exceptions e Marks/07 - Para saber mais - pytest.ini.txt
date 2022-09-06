@@ -1,0 +1,24 @@
+07
+Para saber mais: pytest.ini
+
+PRÓXIMA ATIVIDADE
+
+Sempre que executamos o Pytest no terminal/prompt de comando, ele procura as configurações que deve seguir para a execução dos testes. No caso da existência de um arquivo chamado pytest.ini junto ao projeto, a estrutura primeiramente verifica as especificações existentes dentro do arquivo e deixa em segundo plano suas configurações padrão.
+
+O arquivo pytest.ini possibilita alterações nas configurações padrão do Pytest.
+
+Vamos dar um exemplo de uma nova configuração que sobrepõe a padrão:
+
+Lembra daquela regra que todo teste deve começar com o prefixo test_? Pois bem, por meio de algumas alterações no arquivo pytest.ini podemos mudá-la.
+
+Utilizando as variáveis com os nomes python_functions, python_classes e python_files podemos definir novos padrões de escrita para os nomes de métodos de teste, classes de teste e arquivos de teste, respectivamente.
+
+EXEMPLO:
+
+[pytest]
+python_functions=*_testando
+python_classes=testando_*
+python_files=muitos_testes_*
+No exemplo acima definimos um sufixo (_testando) para os nomes de métodos de teste, um prefixo (testando_) para as classes de teste e um prefixo (muitos_testes_*) para os nomes de arquivos de teste.
+
+Existem várias outras configurações que podem ser feitas através do arquivo pytest.ini, confira a lista de presente na documentação.

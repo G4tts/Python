@@ -1,0 +1,20 @@
+13
+Formatação de strings
+
+PRÓXIMA ATIVIDADE
+
+Assinale as alternativas que apresentam o seguinte resultado: Olá, Rodrigo! Este é seu acesso de número 32.
+
+
+print('Olá, {nome}! Este é seu acesso de número {acessos}'.format(acessos = 32, nome = 'Rodrigo'))
+Alternativa correta! O método .format() permite a atribuição de nomes para os argumentos.
+
+
+nome = 'Rodrigo'
+acessos = 32
+print(f'Olá, {nome}! Este é seu acesso de número {acessos}')
+Alternativa correta! Assim como fizemos em nossa última aula.
+
+
+print('Olá, {}! Este é seu acesso de número {}'.format('Rodrigo', 32))
+Alternativa correta! Lembrando que .format() é um método do objeto string e preenche os campos delimitados por {}, com seus argumentos na ordem em que estão posicionados.

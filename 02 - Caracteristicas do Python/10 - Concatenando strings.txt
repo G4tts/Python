@@ -1,0 +1,18 @@
+10
+Concatenando strings
+PRÓXIMA ATIVIDADE
+
+Considere as variáveis abaixo:
+
+text = 'A quilometragem média do veículo é '
+Km = 100000
+Ano_atual = 2019
+Ano_fabricacao = 1999
+Assinale a alternativa com o código que produz o seguinte output ao ser executado em uma célula do Colab:
+
+'A quilometragem média do veículo é 5000 km'
+
+
+text + str( int( Km / (Ano_atual - Ano_fabricacao) ) ) + ' km'
+Alternativa correta! Note que foram realizadas duas conversões. 
+Na primeira, o resultado da operação (float) é convertido em um inteiro (int) e depois, o dado do tipo inteiro é convertido em uma string (str).

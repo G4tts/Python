@@ -1,0 +1,18 @@
+05
+Nomes de variáveis
+
+PRÓXIMA ATIVIDADE
+
+Sobre o nome de variáveis, avalie as afirmativas abaixo:
+
+1) Nomes de variáveis pode começar com letras (a - z, A - Z) ou o caractere underscore (_)
+
+2) O restante do nome de uma variável só pode conter letras e números
+
+3) Os nomes de variáveis são case sensitive, ou seja, letras maiúsculas e minúsculas são consideradas
+
+Quais estão corretas?
+
+
+As afirmativas 1 e 3 estão corretas
+Alternativa correta! A afirmativa 2 deixa de citar que o caractere "_" também pode ser utilizado para construir os nomes de variáveis.

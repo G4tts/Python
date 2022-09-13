@@ -1,0 +1,16 @@
+08
+Descobrindo o tipo
+PRÓXIMA ATIVIDADE
+
+Os tipos de dados especificam como números e caracteres serão armazenados e manipulados dentro de um programa. Em Python, os tipos de dados básicos são os seguintes:
+
+Números
+int - Inteiros
+float - Ponto flutuante
+Booleanos (bool) - Assume os valores True ou False. Essencial quando começarmos a trabalhar com declarações condicionais
+Strings (str) - Sequência de um ou mais caracteres, que pode incluir letras, números e outros tipos de caracteres. Representa um texto
+None (NoneType) - Representa a ausência de valor
+Em nossa última aula, utilizamos um recurso do Python (Built-in Function) para identificar o tipo de dado de uma variável. Assinale a alternativa que apresenta esta função.
+
+type()
+Alternativa correta! A Built-in Function type() possibilita que identifiquemos o tipo de dado de uma variável.

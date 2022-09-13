@@ -1,0 +1,13 @@
+12
+Características da linguagem
+PRÓXIMA ATIVIDADE
+
+Sobre algumas características da linguagem Python, avalie as alternativas abaixo e marque somente as corretas.
+
+
+Uma das formas de se escrever um comentário no nosso código Python é iniciando uma linha com o caractere '#'. Os comentários são ignorados pelo interpretador Python
+Alternativa correta! Também é possível escrever blocos de comentários (múltiplas linhas) utilizando aspas triplas antes e depois do bloco.
+
+
+Em Python, a indentação não é somente uma questão de organização e estilo, mas sim um requisito da linguagem
+Alternativa correta! Na linguagem Python, os programas são estruturados por meio de indentação.

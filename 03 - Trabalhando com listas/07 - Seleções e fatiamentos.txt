@@ -1,0 +1,27 @@
+07
+Seleções e fatiamentos
+
+PRÓXIMA ATIVIDADE
+
+Considere a seguinte lista:
+
+letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+
+Considere também as seguintes seleções na lista letras:
+
+1) ['A', 'B']
+
+2) ['C', 'D', 'E']
+
+3) ['F', 'G', 'H']
+
+Assinale a alternativa que apresenta os códigos que têm como resultado as seleções acima.
+
+
+1) letras[:2]
+
+2) letras[2:5]
+
+3) letras[-3:]
+
+Alternativa correta! Lembrando que é possível navegar pelos itens de uma lista com índices negativos. Esta técnica permite a navegação pela lista no sentido contrário, isto é, do último item (índice -1) até o primeiro.

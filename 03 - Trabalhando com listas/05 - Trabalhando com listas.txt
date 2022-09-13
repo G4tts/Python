@@ -1,0 +1,35 @@
+05
+Trabalhando com listas
+PRÓXIMA ATIVIDADE
+
+Considere a lista abaixo:
+
+carro = [
+    'Jetta Variant', 
+    'Motor 4.0 Turbo', 
+    2003, 
+    44410.0, 
+    False, 
+    ['Rodas de liga', 'Travas elétricas', 'Piloto automático'], 
+    88078.64
+]
+
+Considere também as seguintes operações:
+
+1) '2003' in carro
+
+2) 'Rodas de liga' in carro
+
+3) 'False' not in carro
+
+Assinale a alternativa que indica os resultados de cada operação acima:
+
+Alternativa correta
+1) False
+
+2) False
+
+3) True
+
+
+Alternativa correta! Sempre utilize um notebook para treinar e entender melhor o funcionamento da linguagem.

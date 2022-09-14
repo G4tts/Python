@@ -1,0 +1,12 @@
+03
+Formato padrão
+
+PRÓXIMA ATIVIDADE
+
+Assinale a alternativa que mostra o formato padrão correto para se utilizar a instrução for na linguagem Python.
+
+Alternativa correta
+for <variável> in <coleção>:
+    <instruções>
+
+Alternativa correta! Lembrando que no campo <variável>, podemos ter qualquer nome válido em Python, no campo <coleção> podemos ter qualquer objeto iterável (listas, dicionários, tuplas etc) e para iniciar as <instruções>, precisamos antes indentar o código.

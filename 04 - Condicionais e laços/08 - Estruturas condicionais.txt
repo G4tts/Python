@@ -1,0 +1,16 @@
+08
+Estruturas condicionais
+
+PRÓXIMA ATIVIDADE
+
+Sobre estruturas condicionais, avalie as alternativas abaixo e assinale a verdadeira.
+
+
+In [2]:
+
+ano = 2003
+if (ano == 2003):
+    print('OK')
+Out [2]: OK
+
+Alternativa correta! Sempre lembrando de manter a atenção para os tipos de operadores que estamos utilizando. Na primeira linha, estamos utilizando um operador de atribuição (=) e na segunda, um de comparação (==).

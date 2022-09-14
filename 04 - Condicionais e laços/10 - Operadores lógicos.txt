@@ -1,0 +1,26 @@
+10
+Operadores lógicos
+
+PRÓXIMA ATIVIDADE
+
+Em nosso último vídeo, vimos como utilizar os operadores lógicos and e or. Visto isso, verifique as duas tabelas abaixo:
+
+1)
+
+X	Y	X and Y
+False	False	False
+False	True	False
+True	False	False
+True	True	True
+2)
+
+X	Y	X or Y
+False	False	False
+False	True	True
+True	False	True
+True	True	False
+Selecione a alternativa que apresenta a avaliação correta.
+
+Alternativa correta
+Apenas a tabela 1 está correta
+Alternativa correta! A expressão X or Y será False somente quando X e Y forem False, ou seja, na tabela 2, a última linha da tabela está incorreta.

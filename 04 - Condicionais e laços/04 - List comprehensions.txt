@@ -1,0 +1,22 @@
+04
+List comprehensions
+
+PRÓXIMA ATIVIDADE
+
+Observe o código abaixo:
+
+In [1]:
+
+quadrado = []
+for i in range(10):
+  quadrado.append(i ** 2)
+
+quadrado
+Out [1]:
+
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]COPIAR CÓDIGO
+Selecione a alternativa que apresenta a forma correta de se criar, de forma concisa (list comprehensions), a mesma lista do código acima.
+
+
+[i ** 2 for i in range(10)]
+Alternativa correta! Nos próximos vídeos, vamos ver algumas formas mais avançadas de se trabalhas com list comprehensions.

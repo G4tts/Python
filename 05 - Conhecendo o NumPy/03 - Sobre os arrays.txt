@@ -1,0 +1,12 @@
+03
+Sobre os arrays
+
+PRÓXIMA ATIVIDADE
+
+Sobre os arrays Numpy, avalie as alternativas abaixo e selecione as corretas.
+
+Não é possível ter mais de um tipo de dado em um único array Numpy
+Alternativa correta! Diferente das listas do Python, que podem conter tipos variados em uma mesma sequência, arrays Numpy suportam somente um tipo de dado por vez.
+
+É possível criar arrays Numpy a partir de dados externos, no formato TXT, utilizando a função loadtxt() do Numpy
+Alternativa correta! Como vimos em nossas aulas, basta fornecer o endereço do arquivo TXT que contém as informações, para carregar um array Numpy com os dados.

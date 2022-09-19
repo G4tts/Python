@@ -1,0 +1,16 @@
+03
+Lista e mapeamentos
+
+PRÓXIMA ATIVIDADE
+
+Sobre listas e mapeamentos, avalie as afirmativas abaixo:
+
+1) Lista é uma coleção de valores indexada, portanto os itens são acessados através de índices (números inteiros).
+
+2) Mapeamentos são coleções de associações entre pares de valores, onde o primeiro elemento do par é conhecido como chave e o segundo como valor.
+
+Qual(is) afirmativa(s) está(ão) correta(s)?
+
+
+Todas as afirmativas estão corretas.
+Alternativa correta! Estas são as definições corretas para lista e mapeamentos. Como exemplo de mapeamento podemos citar os dicionários que possuem o par chave e valor em sua construção
